@@ -1,0 +1,21 @@
+/* Write your CSS here */
+.login-bg {
+  background: #ffffff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: linear-gradient(#2b2c49, #b5b9ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  width: 500px;
+  border-radius: center;
+  border-radius: 10px;
+  font-family: 'roboto';
+}
