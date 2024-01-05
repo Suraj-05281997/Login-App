@@ -25,10 +25,10 @@ class Home extends Component {
 
     if (isLoggedIn) {
       messageElement = <Message text="Welcome User" />
-      buttonElement = <Login onClickButton={this.onClickButton} />
+      buttonElement = <Logout onClickButton={this.onClickButton} />
     } else {
       messageElement = <Message text="Please Login" />
-      buttonElement = <Login onClickButton={this.onClickButton} />
+      buttonElement = <Logout onClickButton={this.onClickButton} />
     }
 
     return (
