@@ -2,34 +2,33 @@
 
 import {Component} from 'react'
 
-import Message from './Message'
+import Message from '../Message'
 
-import Login from './Login'
+import Login from '../Login'
 
-import Logout from './Logout'
+import Logout from '../Logout'
 
 import './index.css'
 
 class Home extends Component {
-  state = {isLogin: false}
+  state = {isLoggedIn: false}
 
-  changeStatus = () => {
-    const {isLogin} = this.state
-    this.setState({isLogin: !isLogin})
+  onClickButton = () => {
+    this.setState(prevState => ({isLoggedIn: !prevState.isLoggedIn}))
   }
 
   render() {
-    const {isLogin} = this.state
+    const {isLoggedIn} = this.state
 
     let messageElement
     let buttonElement
 
-    if (isLogin) {
+    if (isLoggedIn) {
       messageElement = <Message text="Welcome User" />
-      buttonElement = <Login changeStatus={this.changeStatus} />
+      buttonElement = <Login onClickButton={this.onClickButton} />
     } else {
       messageElement = <Message text="Please Login" />
-      buttonElement = <Login changeStatus={this.changeStatus} />
+      buttonElement = <Login onClickButton={this.onClickButton} />
     }
 
     return (

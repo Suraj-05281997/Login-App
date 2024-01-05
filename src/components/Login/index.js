@@ -1,13 +1,13 @@
 // Write your code here
 
-import "./index.css"
+import './index.css'
 
 class Login = props => {
 
-    const {changeStatus} = props
+    const {onClickButton} = props
 
     return (
-        <button type="button" className = "login-button" onClick = {changeStatus} > Logout </button>
+        <button type="button" className = "login-button" onClick = {onClickButton} > Logout </button>
     )
 
 }
